@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <title>Servicios de Enfermería para Adultos Mayores</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Enlace a tu archivo CSS -->
+  </head>
+  <style>
+    /* styles.css */
+    :root {
+      --primary: #3498db;
+      --secundary: #a0d8fd;
+      --three: #c4ddee;
+    }
+    body {
+      font-family: "Nunito", sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--three);
+      display: block;
+    }
+
+    .navigate {
+      background-color: var(--primary);
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .navigate-title {
+      padding-right: 30%;
+    }
+
+    .navigate-title > span {
+      color: var(--secundary);
+    }
+
+    .navigate-nav ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .navigate-nav ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    .navigate-nav a {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .imagepage {
+      background-image: url('/src/image/index-image.jpg');
+      width: 100%;
+      height: 600px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      
+    }
+
+    .card {
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid var(--secundary);
+    }
+
+    .card > h3 {
+      color: var(--primary);
+      text-align: center
+      
+    }
+
+    .mainIndex {
+      background-color: #fff;
+      padding: 20px;
+      margin: 20px;
+      border-radius: 5px;
+    }
+
+
+    .sections {
+      margin-top: 10PX;
+    }
+
+
+    .sections > div > h2 {
+      text-align: center;
+      color: var(--primary);
+      padding-top: 15px;
+    }
+
+    .card-container {
+      padding-top: 2%;
+      width: 80%;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+    }
+
+    .card-containertwo {
+      padding-top: 2%;
+      width: 90%;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+    }
+
+    .card-containertwo > .card {
+      max-width: 540px;
+
+    }
+
+    .btn > a{
+      color: antiquewhite;
+      text-decoration: none;
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: var(--primary);
+      color: #fff;
+    }
+  </style>
+  <body>
+    <header class="navigate">
+      <h1 class="navigate-title">Medi<span>médicas</span></h1>
+      <nav class="navigate-nav">
+        <ul>
+          <li><a href="#misionyvision">Nosotros</a></li>
+          <li><a href="#equipo">Contactenos</a></li>
+          <li><a href="#login">Login</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="imagepage"></div>
+    <main class="mainIndex">
+     
+     <section id="login"   class="sections ">
+      <div>
+        <h2>Accede a la Plataforma</h2>
+      </div>
+     <div class="card-container">
+
+      <div class="card" style="width: 18rem;">
+        <h3>Usuarios</h3>
+        <img src="/src/image/index-usuarios.webp" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+        <button type="button" class="btn btn-primary"><a href="/login">Ingresa</a></button>
+      </div>
+
+      <div class="card" style="width: 18rem;">
+        <h3>Enfermeras</h3>
+        <img src="/src/image/index-enfermeras.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+        <button type="button" class="btn btn-primary" ><a href="/loginEnfermeras">Ingresa</a></button>
+      </div>
+
+      <div class="card" style="width: 18rem;">
+        <h3>Administrativos</h3>
+        <img src="/src/image/index-administrador.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+        <button type="button" class="btn btn-primary"><a href="/adminlog">Ingresa</a></button>
+      </div>
+
+     </div>
+    </section>
+
+    <section id="misionyvision"  class="sections ">
+      <div>
+        <h2>Mision y Vision</h2>
+      </div>
+
+      <div class="card-containertwo">
+
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row no-gutters">
+            <div class="col-md-6">
+              <img src="/src/image/index-image-2.avif" alt="..." style="width: 100%; height: 100%;">
+            </div>
+            <div class="col-md-6">
+              <div class="card-body">
+                <h5 class="card-title">Mision</h5>
+                <p class="card-text">Nuestra misión es mejorar la calidad de vida de nuestros pacientes, promoviendo su bienestar físico y emocional.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row no-gutters">
+            <div class="col-md-6">
+              <img src="/src/image/index-image-vision.jpg" alt="..." style="width: 100%; height: 100%;">
+            </div>
+            <div class="col-md-6">
+              <div class="card-body">
+                <h5 class="card-title">Vision</h5>
+                <p class="card-text">Nuestra visión es ser reconocidos como líderes en la prestación de servicios de enfermería especializados para adultos mayores.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    </main>
+
+    <footer>
+      <p>&copy; 2023 Servicios de Enfermería para Adultos Mayores</p>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

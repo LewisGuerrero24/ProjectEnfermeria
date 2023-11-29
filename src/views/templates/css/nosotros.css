@@ -1,0 +1,49 @@
+:root {
+    --color-primario:white;
+    --color-Secundario:#1e88e3;
+    --color-terciario:#77c1f9;
+}
+
+
+.nosotros-main {
+    background-color: white;
+    margin: 2% auto;
+    width: 90%;
+    height: 100vh;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    overflow: hidden;
+    max-height: 100%;
+}
+
+.nosotros-main-image {
+    background-image: url('/src/image/nosotros.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.nosotros-main-info {
+
+    overflow: hidden;
+    max-height: 100%;
+}
+
+.text-style {
+    margin: 0 auto;
+    width: 80%;
+    text-align: justify;
+
+
+}
+
+.text-style > h1 {
+    color: var(--color-Secundario);
+    
+}
+
+.text-style > p {
+    color: #666666;
+}
+

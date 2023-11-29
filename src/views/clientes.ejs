@@ -1,0 +1,49 @@
+<%- include('partials/MenuAdmin'); %>
+<h1 class="title">Clientes</h1>
+
+    <div class="table-container">
+      <button  class="btn_table" onclick="location.href='/registrousers/<%= user %>`'">Registrar</button> 
+<button  class="btn_table" onclick="location.href='/generarpdf/users'">Generar Informe</button> 
+        <table>
+            <tr>
+                <th class="title_table">CC</th>
+                <th class="title_table">Name</th>
+                <th class="title_table">Edad</th>
+                <th class="title_table">Genero</th>
+                <th class="title_table">Fecha Nacimiento</th>
+                <th class="title_table">Email</th>
+                <th class="title_table">Telefono</th>
+                <th class="title_table">Direccion</th>
+                <th class="title_table">Relacion Paciente</th>
+                <th class="title_table">Usuario</th>
+                <th class="title_table">Password</th>
+                <th class="title_table">Consentimiento</th>
+            </tr>
+            <% clients.forEach((client) => { %>
+                <tr>
+                  <td><%= client.cc %></td>
+                  <td><%= client.name +" "+client.lastname %></td>
+                  <td><%= client.age %></td>
+                  <td><%= client.genero %></td>
+                  <td><%= client.fecha_nacimiento %></td>
+                  <td><%= client.email %></td>
+                  <td><%= client.telefono %></td>
+                  <td><%= client.direccion %></td>
+                  <td><%= client.relacion_paciente%></td>
+                  <td><%= client.user %></td>
+                  <td><%= client.password %></td>
+                  <td><%= client.consentimiento %></td>
+                  <td><button class="btn_table" onclick="location.href=`/deleteusers/<%= client._id %>/<%= user %>`" >Eliminar</button>
+                  <button class="btn_table" onclick="location.href=`/paciente/<%= client._id %>/<%= user %>`">Paciente</button>
+                  <button class="btn_table" onclick="location.href=`/clientes/<%= client._id %>/<%= user %>`">Actualizar</button>
+                </td>
+                  
+                  <!-- ... -->
+                </tr>
+              <% }); %>
+        </table>
+
+    </div>
+    
+</body>
+</html>

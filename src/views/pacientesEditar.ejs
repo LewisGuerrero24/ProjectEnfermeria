@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Ingreso de Datos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+    <div class="container mt-5">
+        <h2>Formulario de Ingreso de Datos</h2>
+        <form action="/ActualizarPacientes/<%= pacients._id %>/<%= user %>" method="post">
+            <!-- Datos Personales -->
+            <div class="form-group">
+                <label for="cc">CC:</label>
+                <input type="number" class="form-control" id="cc" name="cc" value="<%= pacients.cc %>"required>
+            </div>
+            <div class="form-group">
+                <label for="name">Nombre:</label>
+                <input type="text" class="form-control" id="name" name="name" value="<%= pacients.name %>" required>
+            </div>
+            <div class="form-group">
+                <label for="lastname">Apellido:</label>
+                <input type="text" class="form-control" id="lastname" name="lastname" value="<%= pacients.lastname %>" required>
+            </div>
+            <!-- Otros Datos Personales -->
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+                    <input type="text" class="form-control" id="fecha_nacimiento" name="fecha_nacimiento" value="<%= pacients.fecha_nacimiento %>" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" class="form-control" id="email" name="email" value="<%= pacients.email%>" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="genero">Género:</label>
+                <input type="text" class="form-control" id="genero" name="genero" value="<%= pacients.genero %>" required>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="number" class="form-control" id="telefono" name="telefono" value="<%= pacients.telefono %>" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="direccion">Dirección:</label>
+                    <input type="text" class="form-control" id="direccion" name="direccion" value="<%= pacients.direccion %>" required>
+                </div>
+            </div>
+            <!-- Historial Médico -->
+            <div class="form-group">
+                <label for="afeccion">Afección:</label>
+                <input type="text" class="form-control" id="afeccion" name="historial[afeccion]" value="<%= pacients.historial.afeccion %>" >
+            </div>
+            <div class="form-group">
+                <label for="cirugias_pasadas">Cirugías Pasadas:</label>
+                <input type="text" class="form-control" id="cirugias_pasadas" name="historial[Cirugias_pasadas]" value="<%= pacients.historial.Cirugias_pasadas %>" >
+            </div>
+            <div class="form-group">
+                <label for="alergias">Alergias:</label>
+                <input type="text" class="form-control" id="alergias" name="historial[Alergias]" value="<%= pacients.historial.Alergias %>" >
+            </div>
+            <div class="form-group">
+                <label for="medicamentos_actuales">Medicamentos Actuales:</label>
+                <input type="text" class="form-control" id="medicamentos_actuales" name="historial[Medicamentos_actuales]" value="<%= pacients.historial.Medicamentos_actuales %>" >
+            </div>
+            <!-- Otros Datos -->
+            <div class="form-group">
+                <label for="fecha_registro">Fecha de Registro:</label>
+                <input type="text" class="form-control" id="fecha_registro" name="fecha_registro" value="<%= pacients.Fecha_registro %>" required>
+            </div>
+            <div class="form-group">
+                <label for="consentimiento">Consentimiento:</label>
+                <input class="form-control" id="consentimiento" name="consentimiento" rows="4" value="<%= pacients.consentimiento %>"  required>
+            </div>
+            <div class="form-group">
+                <label for="cliente_id">ID del Cliente:</label>
+                <input type="text" class="form-control" id="cliente_id" name="cliente_id" value="<%= pacients.cliente_id %>" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Actualizar</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

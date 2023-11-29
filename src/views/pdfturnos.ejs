@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Menú de Navegación</title>
+    
+</head>
+<style>
+    
+    .title{
+        color: #007BFF;
+        margin-left:2%;
+    }
+
+    .table-container {
+        max-width: 96%; /* Tamaño máximo de la tabla */
+        margin: 0 auto;
+        
+    }
+
+    .table-container > table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        font-size: 12px;
+        margin-left: 0;
+    }
+
+    .table-container > table > .title_table , td {
+        padding: 10px;
+        border: 1px solid #ddd;
+    }
+
+ .title_table {
+        background-color: #007BFF;
+        color: white;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    .btn_table {
+        background-color: #007BFF;
+        color: white;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 3px;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    .btn_table:hover {
+        background-color: #0056b3;
+    }
+
+</style>
+<body>
+<h1 class="title">Turnos</h1>
+    <div class="table-container">
+        <table> 
+            <tr> 
+              <th class="title_table">Fecha Inicio</th> 
+              <th class="title_table">Fecha Fin</th> 
+              <th class="title_table">ID Paciente</th> 
+              <th class="title_table">ID Enfermera</th> 
+              <th class="title_table">Jornada</th> 
+              <th class="title_table">Valor</th> 
+            </tr> <% turno.forEach((turn) => { %> <tr> 
+              <td><%= turn.fecha_inicio %></td> 
+              <td><%= turn.fecha_fin %></td> 
+              <td><%= turn.id_paciente %></td> 
+              <td><%= turn.id_enfermera %></td> 
+              <td><%= turn.jornada %></td> 
+              <td><%= turn.valor %></td> </tr> 
+              <% });  
+              %> 
+            </table> 
+    </div>
+    
+</body>
+</html>

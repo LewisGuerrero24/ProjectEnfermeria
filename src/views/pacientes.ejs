@@ -1,0 +1,59 @@
+<%- include('partials/MenuAdmin'); %>
+    <h1 class="title">Pacientes</h1>
+
+    <div class="table-container">
+        <button class="btn btn-primary btn_table" onclick="location.href='/registroPacientes/<%= user %>/'">Registrar</button>
+        <button class="btn btn-primary btn_table" onclick="location.href='/generarpdf/pacientes'">Generar Informe</button>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Fecha Nacimiento</th>
+                    <th>Email</th>
+                    <th>Telefono</th>
+                    <th>Direccion</th>
+                    <th>Genero</th>
+                    <th>Age</th>
+                    <th>Contacto Emergencia</th>
+                    <th>Seguro</th>
+                    <th>Fecha Registro</th>
+                    <th>Consentimiento</th>
+                    <th>Acciones</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <% pacientes.forEach((paciente) => { %>
+                    <tr>
+                        <td><%= paciente.name +" "+paciente.lastname %></td>
+                        <td><%= paciente.fecha_nacimiento %></td>
+                        <td><%= paciente.email %></td>
+                        <td><%= paciente.telefono %></td>
+                        <td><%= paciente.direccion %></td>
+                        <td><%= paciente.genero %></td>
+                        <td><%= paciente.age %></td>
+                        <td><%= paciente.contacto_emergencia %></td>
+                        <td><%= paciente.Seguro %></td>
+                        <td><%= paciente.Fecha_registro %></td>
+                        <td><%= paciente.consentimiento %></td>
+                        <td>
+                            <button class="btn btn-sm btn-primary btn-table" onclick="location.href='/deletepacientes/<%= paciente._id %>/<%= user %>'">Eliminar</button>
+                            <button class="btn btn-sm btn-info btn-table" onclick="location.href='/HistorialPacientes/<%= paciente._id %>/<%= user %>'">Historia</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-sm btn-primary btn-table" onclick="location.href='/pacientes/<%= paciente._id %>/<%= user %>'">Actualizar</button>
+                        </td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+
+       
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,29 @@
+<%- include('partials/MenuCliente'); %>
+    <h1 class="title">Notas de Enfermeria</h1>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th class="title_table">ID Paciente</th>
+                    <th class="title_table">Fecha</th>
+                    <th class="title_table">Descripción</th>
+                    <th class="title_table">ID Enfermera</th>
+                    <th class="title_table">Asistencia</th>
+                </tr>
+           
+            <tbody>
+                <% notas.forEach(function(nota){ %>
+                    <tr>
+                        <td><%= nota.id_paciente %></td>
+                        <td><%= nota.fecha %></td>
+                        <td><%= nota.descripcion %></td>
+                        <td><%= nota.id_Enfermera %></td>
+                        <td><%= nota.asistencia %></td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </div>
+    
+</body>
+</html>

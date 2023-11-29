@@ -1,0 +1,10 @@
+:root{
+    --primario:#dad0f7;
+    --secundaria: #9073e7;
+    --terciario: ##6a44df;
+
+}
+
+.nav-bg {
+    background-color: var( --primario:) ;
+}

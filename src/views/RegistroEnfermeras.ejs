@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Registro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #007bff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="email"],
+        input[type="date"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        input[type="checkbox"] {
+            margin-top: 10px;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Formulario de Registro</h1>
+        <form action="/regEnfer/<%= user %>" method="post">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="lastname">Apellido:</label>
+            <input type="text" id="lastname" name="lastname" required>
+
+            <label for="age">Edad:</label>
+            <input type="text" id="age" name="age" required>
+
+            <label for="user">Nombre de Usuario:</label>
+            <input type="text" id="user" name="user" required>
+
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+            <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+
+            <label for="genero">Género:</label>
+            <select id="genero" name="genero" required>
+                <option value="Masculino">Masculino</option>
+                <option value="Femenino">Femenino</option>
+                <option value="Otro">Otro</option>
+            </select>
+
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" name="direccion" required>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="text" id="telefono" name="telefono" required>
+
+            <label for="correoElectronico">Correo Electrónico:</label>
+            <input type="email" id="correoElectronico" name="correoElectronico" required>
+
+            <label for="fechaContratacion">Fecha de Contratación:</label>
+            <input type="date" id="fechaContratacion" name="fechaContratacion" required>
+
+            <label for="especialidad">Especialidad:</label>
+            <input type="text" id="especialidad" name="especialidad" required>
+
+            <label for="licencia">Licencia:</label>
+            <input type="text" id="licencia" name="licencia" required>
+
+            <label for="horario">Horario:</label>
+            <input type="text" id="horario" name="horario" required>
+
+            <label for="cc">Cédula de Ciudadanía:</label>
+            <input type="text" id="cc" name="cc" required>
+
+            <label for="vencimientoLicencia">Vencimiento de Licencia:</label>
+            <input type="date" id="vencimientoLicencia" name="vencimientoLicencia" required>
+
+            <label for="estadoCivil">Estado Civil:</label>
+            <select id="estadoCivil" name="estadoCivil" required>
+                <option value="Solter@">Solter@</option>
+                <option value="Casad@">Casad@</option>
+                <option value="Otro">Otro</option>
+            </select>
+
+            <label for="Numeroemergencia">Número de Emergencia:</label>
+            <input type="text" id="Numeroemergencia" name="Numeroemergencia" required>
+
+            <button type="submit">Registrar</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<%- include('partials/MenuAdmin'); %>
+<h1 class="title">Pagos Enfermeras</h1>
+
+    <div class="table-container">
+      <button class="btn btn-primary btn_table" onclick="location.href='/formulariopago/<%= user %>/'">Registrar</button>
+        <table >
+            <thead>
+              <tr>
+                <th>Código</th>
+                <th>Nombre</th>
+                <th>Fecha Inicial</th>
+                <th>Fecha Fin</th>
+                <th>Valor Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% pagos.forEach(function(pago) { %>
+                <tr>
+                  <td><%= pago.cod %></td>
+                  <td><%= pago.Nombre %></td>
+                  <td><%= pago.fecha_inicial %></td>
+                  <td><%= pago.fecha_fin %></td>
+                  <td><%= pago.valor_total %></td>
+                </tr>
+              <% }); %>
+            </tbody>
+          </table>
+
+    </div>
+    
+</body>
+</html>

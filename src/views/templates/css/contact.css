@@ -1,0 +1,80 @@
+:root {
+    --color-primario:white;
+    --color-Secundario:#1e88e3;
+    --color-terciario:#77c1f9;
+    --color-gris:#666666 ;
+}
+
+
+.contact-main {
+    background-color: white;
+    margin: 2% auto;
+    width: 90%;
+    height: 100vh;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    
+}
+
+.contact-main-form {
+    margin: 0 auto;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    -webkit-box-shadow: 8px 3px 30px -11px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 8px 3px 30px -11px rgba(66, 68, 90, 1);
+    box-shadow: 8px 3px 30px -11px rgba(66, 68, 90, 1);
+    border-radius: 20px;
+        
+}
+
+.contact-main-form-image {
+    background-image: url('/src/image/contactanos.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 400px;
+}
+
+.contact-main-formu {
+    display: flex;
+
+    align-items: center;
+    margin-left: 20%;
+}
+
+.contact-main-formu > form {
+    display: flex;
+    flex-direction: column;
+
+   
+}
+
+.input-style {
+    border: none;
+    border-bottom: 2px solid var(--color-gris);
+    margin-bottom: 20px;
+    outline: none;
+    height: 30px;
+
+}
+
+.textarea {
+    border: 2px solid var(--color-gris);
+    height: 100px;
+    outline: none;
+}
+
+.btn {
+    border: none;
+    background-color: var(--color-Secundario);
+    color: var(--color-primario);
+    width: 30%;
+    height: 2rem;
+    font-weight: 700;
+    margin-top: 10%;
+    cursor: pointer;
+}

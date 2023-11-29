@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Registro de Nota</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Formulario de Registro de Nota</h1>
+        <form action="/regNotas/<%= user %>" method="post">
+            <label for="id_paciente">ID del Paciente:</label>
+            <input type="text" id="id_paciente" name="id_paciente" value="<%= id %>" >
+
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha" name="fecha" required>
+
+            <label for="descripcion">Descripción:</label>
+            <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+
+            <label for="id_Enfermera">ID de la Enfermera:</label>
+            <input type="text" id="id_Enfermera" name="id_Enfermera" value="<%= enfermera._id %>" >
+
+            <label for="asistencia">Asistencia:</label>
+            <select id="asistencia" name="asistencia" required>
+                <option value="Presente">Presente</option>
+                <option value="Ausente">Ausente</option>
+            </select>
+
+            <button type="submit">Registrar Nota</button>
+        </form>
+    </div>
+</body>
+</html>

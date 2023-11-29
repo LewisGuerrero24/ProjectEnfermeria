@@ -1,0 +1,25 @@
+<%- include('partials/MenuEnfermera'); %>
+<h1 class="title">Turnos</h1> 
+<div class="table-container"> 
+  <table> 
+    <tr> 
+      <th class="title_table">Fecha Inicio</th> 
+      <th class="title_table">Fecha Fin</th> 
+      <th class="title_table">ID Paciente</th> 
+      <th class="title_table">Jornada</th> 
+      <th class="title_table">Valor</th> 
+    </tr> <% turno.forEach((turn) => { %> <tr> 
+      <td><%= turn.fecha_inicio %></td> 
+      <td><%= turn.fecha_fin %></td> 
+      <td><%= turn.id_paciente %></td> 
+      <td><%= turn.jornada %></td> 
+      <td><%= turn.valor %></td> </tr> 
+      <td><button class="btn_table" onclick="location.href=`/informacionPacientes/<%= turn.id_paciente  %>/<%= user %>`" >informacion paciente</button></td>
+      <td><button class="btn_table" onclick="location.href=`/registroNotas/<%= turn.id_paciente %>/<%= user %>`" >Notas</button></td>
+      <% });  
+      %> 
+      <br><br>
+    </table> 
+  </div> 
+</body> 
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <title>Formulario de Pagos</title>
+</head>
+<body>
+
+<div class="container mt-5">
+  <form action="/consultabd/<%= user %>" method="post">
+    <h1>Formulario Pagos</h1>
+    <label for="id_enfermera">ID de la Enfermera:</label>
+    
+    <select class="form-control"  id="id_enfermera" name="id_enfermera" required>
+        <% enfermera.forEach(function(ferm){ %>
+            <option value="<%= ferm._id %>"><%= ferm.name+' '+ferm.lastname %></option>
+        <% }); %>
+    </select>     
+
+    <div class="form-group">
+      <label for="fecha_inicial">Fecha Inicial:</label>
+      <input type="date" class="form-control" id="fecha_inicial" name="fecha_inicial" required>
+    </div>
+    <div class="form-group">
+      <label for="fecha_fin">Fecha Fin:</label>
+      <input type="date" class="form-control" id="fecha_fin" name="fecha_fin" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Enviar</button>
+  </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

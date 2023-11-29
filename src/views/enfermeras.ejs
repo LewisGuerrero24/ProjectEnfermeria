@@ -1,0 +1,47 @@
+<%- include('partials/MenuAdmin'); %>
+
+<h1 class="title">Enfermeras</h1>
+<div class="table-container">
+  <button class="btn_table" onclick="location.href='/registroEnfermeras/<%= user %>'">Registrar</button>
+  <button class="btn_table" onclick="location.href='/generarpdf/enfermeras'">Generar Informe</button>
+ <table>
+    <tr>
+      <th class="title_table">Nombre</th>
+      <th class="title_table">Apellido</th>
+      <th class="title_table">Edad</th>
+      <th class="title_table">Genero</th>
+      <th class="title_table">Fecha Nacimiento</th>
+      <th class="title_table">Fecha Contratacion</th>
+      <th class="title_table">Especialidad</th>
+      <th class="title_table">Licencia</th>
+      <th class="title_table">Horario</th>
+      <th class="title_table">Cedula</th>
+      <th class="title_table">Vencimiento Licencia</th>
+      <th class="title_table">Estado Civil</th>
+      <th class="title_table"> Numero Emergencia</th>
+    </tr>
+    <% nurses.forEach((nurse) => { %>
+    <tr>
+      <td><%= nurse.name %></td>
+      <td><%= nurse.lastname %></td>
+      <td><%= nurse.age %></td>
+      <td><%= nurse.genero %></td>
+      <td><%= nurse.fechaNacimiento %></td>
+      <td><%= nurse.fechaContratacion %></td>
+      <td><%= nurse.especialidad %></td>
+      <td><%= nurse.licencia %></td>
+      <td><%= nurse.horario %></td>
+      <td><%= nurse.cc %></td>
+      <td><%= nurse.vencimientoLicencia %></td>
+      <td><%= nurse.estadoCivil %></td>
+      <td><%= nurse.Numeroemergencia %></td>
+      <td><button class="btn_table" onclick="location.href=`/deleteenfermeras/<%= nurse._id %>/<%= user %>`">Eliminar</button>
+        <button class="btn_table" onclick="location.href=`/enfermeras/<%= nurse._id %>/<%= user %>`">Actualizar</button>
+      </td>
+    </tr>
+    <% }); %>
+ </table>
+
+</div>
+</body>
+</html>

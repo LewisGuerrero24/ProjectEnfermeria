@@ -1,0 +1,26 @@
+<%- include('partials/MenuAdmin'); %>
+    <h1 class="title">Historial <%= paciente.name +' '+paciente.lastname %> </h1>
+    <div class="table-container">
+        <table>
+            <tr>
+                <th class="title_table">Cirugias</th>
+                <th class="title_table">Alergias</th>
+                <th class="title_table">Medicamentos</th>
+                <th class="title_table">Afeccion</th>
+        
+            </tr>
+           
+                <tr>
+                 <td><%= paciente.historial.Cirugias_pasadas %></td>
+                 <td><%= paciente.historial.Alergias %></td>
+                 <td><%= paciente.historial.Medicamentos_actuales %></td>
+                 <td><%= paciente.historial.afeccion %></td>
+                </tr>
+
+        </table>
+ 
+     
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,42 @@
+<%- include('partials/MenuEnfermera'); %>
+    <h1 class="title">Pacientes</h1>
+    <div class="table-container">
+        <table>
+            <tr>
+                <th class="title_table">CC</th>
+                <th class="title_table">Name</th>
+                <th class="title_table">Fecha Nacimiento</th>
+                <th class="title_table">Email</th>
+                <th class="title_table">Telefono</th>
+                <th class="title_table">Direccion</th>
+                <th class="title_table">Genero</th>
+                <th class="title_table">Age</th>
+                <th class="title_table">Contacto Emergencia</th>
+                <th class="title_table">Seguro</th>
+                <th class="title_table">Fecha Registro</th>
+                <th class="title_table">Consentimiento</th>
+            </tr>
+        
+                <tr>
+                 <td><%= paciente.cc %></td>
+                 <td><%= paciente.name +" "+paciente.lastname %></td>
+                 <td><%= paciente.fecha_nacimiento %></td>
+                 <td><%= paciente.email %></td>
+                 <td><%= paciente.telefono %></td>
+                 <td><%= paciente.direccion %></td>
+                 <td><%= paciente.genero %></td>
+                 <td><%= paciente.age %></td>
+                 <td><%= paciente.contacto_emergencia %></td>
+                 <td><%= paciente.Seguro %></td>
+                 <td><%= paciente.Fecha_registro %></td>
+                 <td><%= paciente.consentimiento %></td>
+                 <button class="btn_table" onclick="location.href=`/HistorialEnfermera/<%= paciente._id %>/<%= user %>`">Historia</button></td>
+                  
+                 <!-- ... -->
+                </tr>
+       
+        </table>
+    </div>
+    
+</body>
+</html>
